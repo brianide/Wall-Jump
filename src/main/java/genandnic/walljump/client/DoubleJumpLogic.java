@@ -69,5 +69,9 @@ public class DoubleJumpLogic {
 
         return jumpCount;
     }
+    
+    public static int getRemainingJumps() {
+        return jumpCount;
+    }
 
 }

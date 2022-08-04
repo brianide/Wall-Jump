@@ -12,6 +12,7 @@ public class Config {
         public final ForgeConfigSpec.BooleanValue allowReClinging;
         public final ForgeConfigSpec.BooleanValue autoRotation;
         public final ForgeConfigSpec.DoubleValue elytraSpeedBoost;
+        public final ForgeConfigSpec.BooleanValue deferElytra;
         public final ForgeConfigSpec.BooleanValue enableEnchantments;
         public final ForgeConfigSpec.DoubleValue exhaustionWallJump;
         public final ForgeConfigSpec.DoubleValue minFallDistance;
@@ -35,6 +36,9 @@ public class Config {
             this.elytraSpeedBoost = builder
                     .comment("Elytra speed boost; set to 0.0 to disable")
                     .defineInRange("elytraSpeedBoost", 0.0, 0.0, 5.0);
+            this.deferElytra = builder
+                    .comment("Prevent Elytra from deploying until all multijumps are expended")
+                    .define("deferElytra", false);
             this.enableEnchantments = builder
                     .comment("Enable Wall-Jump enchantments in the enchanting table")
                     .define("enableEnchantments",true);
